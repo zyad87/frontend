@@ -7,7 +7,7 @@ import Admin from "./pages/Admin";
 import NotFoundPage from "./pages/NotFoundPage";
 import Dev from "./pages/Dev";
 import Docs from "./pages/DevDocs";
-import Login from "./components/login";
+import Login from './components/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
