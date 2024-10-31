@@ -396,7 +396,7 @@ const Admin = () => {
   useEffect(() => {
     axios
       // .get("https://6717e676b910c6a6e02a7fd0.mockapi.io/log")
-      .get("http://localhost:3024/api/paramedics/all")
+      .get("https://backend-kt1j.onrender.com/api/paramedics/all")
       .then((response) => {
         setParamedics(response.data);
       })
@@ -454,7 +454,7 @@ const Admin = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .put(`http://localhost:3024/api/paramedics/approve/${_id}`
+          .put(`https://backend-kt1j.onrender.com/api/paramedics/approve/${_id}`
         
             , {
             isApproved: true,
@@ -500,7 +500,7 @@ const Admin = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3024/api/paramedics/delete/${_id}`)
+          .delete(`https://backend-kt1j.onrender.com/api/paramedics/delete/${_id}`)
           .then(() => {
             setParamedics((prev) =>
               prev.filter((paramedic) => paramedic._id !== _id)
@@ -619,7 +619,7 @@ const Admin = () => {
   <strong>المؤهلات:</strong> 
   {selectedParamedic.pdfFile ? (
     <a 
-      href={`http://localhost:3024/${selectedParamedic.pdfFile}`} 
+      href={`https://backend-kt1j.onrender.com/${selectedParamedic.pdfFile}`} 
       target="_blank" 
       rel="noopener noreferrer" 
       className="text-[#ab1c1c] underline"

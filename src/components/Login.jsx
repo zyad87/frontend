@@ -79,8 +79,8 @@ function Login() {
       navigate('/admin');
     } else {
       // Paramedic login
-      axios.post('http://localhost:3024/api/paramedics/login', formData)
-        .then((response) => {
+      axios.post('https://backend-kt1j.onrender.com/api/paramedics/login', formData)
+      .then((response) => {
           const { id, name, phone } = response.data;
   
           // Save paramedic data to localStorage

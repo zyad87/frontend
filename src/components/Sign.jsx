@@ -76,7 +76,7 @@ function Sign() {
     formDataToSend.append('file-upload', file); // تأكد من مطابقة اسم الحقل هنا لـ file-upload
   
     axios
-      .post('http://localhost:3024/api/paramedics/register', formDataToSend, {
+      .post('https://backend-kt1j.onrender.com/api/paramedics/register', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
